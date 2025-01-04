@@ -95,7 +95,7 @@
     @apply border-border;
   }
   body {
-    @apply min-h-svh min-w-svw bg-background text-foreground text-body;
+    @apply min-h-svh bg-background text-foreground text-body;
     
   }
 }
