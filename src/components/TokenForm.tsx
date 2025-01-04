@@ -1,6 +1,6 @@
-import { useIdle } from "@/hooks/useIdle";
-import { cn } from "@/lib/utils";
-import { networkCoreDeployments } from "@/utils/env";
+import { useIdle } from "../hooks/useIdle";
+import { cn } from "../lib/utils";
+import { networkCoreDeployments } from "../utils/env";
 import {
   ArrowUpRight,
   Check,
@@ -29,13 +29,13 @@ import {
 } from "./ui/drawer";
 import { Input } from "./ui/input";
 import { useTokenFormStore } from "../stores/tokenFormStore";
-import { usePublicClientStore } from "@/stores/publicClientStore";
+import { usePublicClientStore } from "../stores/publicClientStore";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "./ui/popover";
 import {
   Command,
   CommandEmpty,
