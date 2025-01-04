@@ -6,11 +6,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
         indexed: true,
         internalType: "address",
         name: "_dependencyRegistry",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "DependencyRegistryUpdated",
-    type: "event"
+    type: "event",
   },
   {
     anonymous: false,
@@ -19,11 +19,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
         indexed: true,
         internalType: "address",
         name: "_gunzipScriptBytecodeAddress",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "GunzipScriptBytecodeAddressUpdated",
-    type: "event"
+    type: "event",
   },
   {
     anonymous: false,
@@ -32,11 +32,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
         indexed: false,
         internalType: "uint8",
         name: "version",
-        type: "uint8"
-      }
+        type: "uint8",
+      },
     ],
     name: "Initialized",
-    type: "event"
+    type: "event",
   },
   {
     anonymous: false,
@@ -45,11 +45,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
         indexed: true,
         internalType: "address",
         name: "_scriptyBuilder",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "ScriptyBuilderUpdated",
-    type: "event"
+    type: "event",
   },
   {
     anonymous: false,
@@ -58,11 +58,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
         indexed: true,
         internalType: "address",
         name: "_universalBytecodeStorageReader",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "UniversalBytecodeStorageReaderUpdated",
-    type: "event"
+    type: "event",
   },
   {
     inputs: [],
@@ -71,102 +71,136 @@ export const DiGiGenArt721GeneratorV0Abi = [
       {
         internalType: "contract IDependencyRegistryV0",
         name: "",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "string",
         name: "dependencyNameAndVersion",
-        type: "string"
-      }
+        type: "string",
+      },
     ],
     name: "getDependencyScript",
     outputs: [
       {
         internalType: "string",
         name: "",
-        type: "string"
-      }
+        type: "string",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "coreContract",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "uint256",
         name: "projectId",
-        type: "uint256"
-      }
+        type: "uint256",
+      },
+    ],
+    name: "getOnChainStatus",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "dependencyFullyOnChain",
+        type: "bool",
+      },
+      {
+        internalType: "bool",
+        name: "injectsDecentralizedStorageNetworkAssets",
+        type: "bool",
+      },
+      {
+        internalType: "bool",
+        name: "hasOffChainFlexDepRegDependencies",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "coreContract",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "projectId",
+        type: "uint256",
+      },
     ],
     name: "getProjectScript",
     outputs: [
       {
         internalType: "string",
         name: "",
-        type: "string"
-      }
+        type: "string",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "coreContract",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "uint256",
         name: "tokenId",
-        type: "uint256"
-      }
+        type: "uint256",
+      },
     ],
     name: "getTokenHtml",
     outputs: [
       {
         internalType: "string",
         name: "",
-        type: "string"
-      }
+        type: "string",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "coreContract",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "uint256",
         name: "tokenId",
-        type: "uint256"
-      }
+        type: "uint256",
+      },
     ],
     name: "getTokenHtmlBase64EncodedDataUri",
     outputs: [
       {
         internalType: "string",
         name: "",
-        type: "string"
-      }
+        type: "string",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [],
@@ -175,39 +209,39 @@ export const DiGiGenArt721GeneratorV0Abi = [
       {
         internalType: "address",
         name: "",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "_dependencyRegistry",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "address",
         name: "_scriptyBuilder",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "address",
         name: "_gunzipScriptBytecodeAddress",
-        type: "address"
+        type: "address",
       },
       {
         internalType: "address",
         name: "_universalBytecodeStorageReader",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "initialize",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [],
@@ -216,11 +250,11 @@ export const DiGiGenArt721GeneratorV0Abi = [
       {
         internalType: "contract IScriptyBuilderV2",
         name: "",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [],
@@ -229,62 +263,62 @@ export const DiGiGenArt721GeneratorV0Abi = [
       {
         internalType: "contract IUniversalBytecodeStorageReader",
         name: "",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     stateMutability: "view",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "_dependencyRegistry",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "updateDependencyRegistry",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "_gunzipScriptBytecodeAddress",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "updateGunzipScriptBytecodeAddress",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "_scriptyBuilder",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "updateScriptyBuilder",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function"
+    type: "function",
   },
   {
     inputs: [
       {
         internalType: "address",
         name: "_universalBytecodeStorageReader",
-        type: "address"
-      }
+        type: "address",
+      },
     ],
     name: "updateUniversalBytecodeStorageReader",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function"
+    type: "function",
   },
 ] as const;
