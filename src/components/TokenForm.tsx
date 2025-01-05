@@ -50,6 +50,8 @@ import { EthereumIcon } from "./EthereumIcon";
 import dotenv from "dotenv";
 dotenv.config();
 
+const VITE_JSON_RPC_PROVIDER_URL = process.env.VITE_JSON_RPC_PROVIDER_URL || "";
+
 export function TokenForm() {
   // Get and initialize the token form state
   const {
@@ -372,7 +374,7 @@ export function JsonRpcUrlForm({ className }: { className?: string }) {
   const { jsonRpcUrl, setJsonRpcUrl, resetJsonRpcUrl } = usePublicClientStore();
   const [pendingJsonRpcUrl, setPendingJsonRpcUrl] = useState(jsonRpcUrl);
   const isDefaultJsonRpcUrl =
-    jsonRpcUrl === process.env.VITE_JSON_RPC_PROVIDER_URL;
+    jsonRpcUrl === VITE_JSON_RPC_PROVIDER_URL;
 
   useEffect(() => {
     setPendingJsonRpcUrl(jsonRpcUrl);

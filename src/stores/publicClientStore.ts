@@ -20,13 +20,15 @@ interface PublicClientState {
   resetJsonRpcUrl: () => void;
 }
 
+const VITE_JSON_RPC_PROVIDER_URL = process.env.VITE_JSON_RPC_PROVIDER_URL || "";
+
 export const usePublicClientStore = create<PublicClientState>()(
   persist(
     (set) => {
       return {
         jsonRpcUrl: process.env.VITE_JSON_RPC_PROVIDER_URL,
         publicClient: createPublicClientFromUrl(
-          process.env.VITE_JSON_RPC_PROVIDER_URL
+          VITE_JSON_RPC_PROVIDER_URL
         ),
         setJsonRpcUrl: (url: string) => {
           set({
@@ -36,9 +38,9 @@ export const usePublicClientStore = create<PublicClientState>()(
         },
         resetJsonRpcUrl: () => {
           set({
-            jsonRpcUrl: process.env.VITE_JSON_RPC_PROVIDER_URL,
+            jsonRpcUrl: VITE_JSON_RPC_PROVIDER_URL,
             publicClient: createPublicClientFromUrl(
-              process.env.VITE_JSON_RPC_PROVIDER_URL
+              VITE_JSON_RPC_PROVIDER_URL
             ),
           });
         },
