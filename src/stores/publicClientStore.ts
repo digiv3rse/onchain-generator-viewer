@@ -1,4 +1,4 @@
-import { network } from "@/utils/env";
+import { network } from "../utils/env";
 import { createPublicClient, http, PublicClient } from "viem";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";

@@ -1,7 +1,7 @@
 import { Hex, PublicClient } from "viem";
-import { CoreDeployment } from "@/deployments/cores";
+import { CoreDeployment } from "../deployments/cores";
 import { dependencyRegistryAddress, generatorAddress } from "./env";
-import { DiGiGenArt721GeneratorV0Abi } from "@/abis/DiGiGenArt721GeneratorV0Abi";
+import { DiGiGenArt721GeneratorV0Abi } from "../abis/DiGiGenArt721GeneratorV0Abi";
 
 export async function getProjectOnChainStatus(
   publicClient: PublicClient,

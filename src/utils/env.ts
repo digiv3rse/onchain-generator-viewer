@@ -1,17 +1,16 @@
-import { generatorDeployments } from "@/deployments/generator";
-import { coreDeployments } from "@/deployments/cores";
-import { mainnet, sepolia } from "viem/chains";
-import { dependencyRegistryDeployments } from "@/deployments/dependencyRegistries";
+import { generatorDeployments } from "../deployments/generator";
+import { coreDeployments } from "../deployments/cores";
+import { sepolia } from "viem/chains";
+import { dependencyRegistryDeployments } from "../deployments/dependencyRegistries";
 
 export const networkNameToChainMap = {
-  mainnet: mainnet,
   sepolia: sepolia,
 };
 
 // @dev default to mainnet if network env var not populated
 export const network =
   networkNameToChainMap[
-    (import.meta.env.VITE_NETWORK || "mainnet") as "mainnet" | "sepolia"
+    (import.meta.env.VITE_NETWORK || "sepolia") as "sepolia" | "sepolia"
   ];
 
 export const generatorAddress = generatorDeployments[network.id];

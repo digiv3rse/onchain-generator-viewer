@@ -4,10 +4,10 @@ import {
   getProjectInvocations,
   getSupportedCoreContracts,
   getProjectOnChainStatus,
-} from "@/utils/project";
-import { networkCoreDeployments } from "@/utils/env";
+} from "../utils/project";
+import { networkCoreDeployments } from "../utils/env";
 import { usePublicClientStore } from "./publicClientStore";
-import { CoreDeployment } from "@/deployments/cores";
+import { CoreDeployment } from "../deployments/cores";
 import { Hex } from "viem";
 
 // Helper functions for URL manipulation
