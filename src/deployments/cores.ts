@@ -41,19 +41,19 @@ export const coreDeployments: {
       label: "DiGi Art Flagship v3",
       address: "0x151B912f2c7c1CB9CEc9d4e86cd1c2F7f2ECF77b",
       version: 3,
-      startingProjectId: 0,
+      startingProjectId: 1,
     },
     {
       label: "DiGi Art Flagship v3",
       address: "0xcF624B26d58bbBB96b5BE871938fA77c98Bacf4A",
       version: 3,
-      startingProjectId: 0,
+      startingProjectId: 1,
     },
     {
       label: "DiGi Art Flagship v3",
       address: "0xc9181e6FC8A7Cfe16a296ec59c53B0B131597F0a",
       version: 3,
-      startingProjectId: 0,
+      startingProjectId: 1,
     },
   ],
 };
