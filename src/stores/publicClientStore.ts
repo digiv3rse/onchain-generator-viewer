@@ -26,7 +26,7 @@ export const usePublicClientStore = create<PublicClientState>()(
   persist(
     (set) => {
       return {
-        jsonRpcUrl: process.env.VITE_JSON_RPC_PROVIDER_URL,
+        jsonRpcUrl: VITE_JSON_RPC_PROVIDER_URL,
         publicClient: createPublicClientFromUrl(
           VITE_JSON_RPC_PROVIDER_URL
         ),
