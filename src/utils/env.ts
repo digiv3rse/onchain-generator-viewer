@@ -1,7 +1,7 @@
 import { generatorDeployments } from "../deployments/generator";
 import { coreDeployments } from "../deployments/cores";
 import { sepolia } from "viem/chains";
-import { dependencyRegistryDeployments } from "deployments/dependencyRegistries";
+import { dependencyRegistryDeployments } from "../deployments/dependencyRegistries";
 import dotenv from "dotenv";
 dotenv.config();
 
