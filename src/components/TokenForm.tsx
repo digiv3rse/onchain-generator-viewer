@@ -47,6 +47,8 @@ import {
 import { Tooltip } from "@radix-ui/react-tooltip";
 import { TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { EthereumIcon } from "./EthereumIcon";
+import dotenv from "dotenv";
+dotenv.config();
 
 export function TokenForm() {
   // Get and initialize the token form state
@@ -370,7 +372,7 @@ export function JsonRpcUrlForm({ className }: { className?: string }) {
   const { jsonRpcUrl, setJsonRpcUrl, resetJsonRpcUrl } = usePublicClientStore();
   const [pendingJsonRpcUrl, setPendingJsonRpcUrl] = useState(jsonRpcUrl);
   const isDefaultJsonRpcUrl =
-    jsonRpcUrl === import.meta.env.VITE_JSON_RPC_PROVIDER_URL;
+    jsonRpcUrl === process.env.VITE_JSON_RPC_PROVIDER_URL;
 
   useEffect(() => {
     setPendingJsonRpcUrl(jsonRpcUrl);
